@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C07B018D194E110600EACCC5 /* Chomp.wav in Resources */ = {isa = PBXBuildFile; fileRef = C07B0187194E110600EACCC5 /* Chomp.wav */; };
+		C07B018E194E110600EACCC5 /* Drip.wav in Resources */ = {isa = PBXBuildFile; fileRef = C07B0188194E110600EACCC5 /* Drip.wav */; };
+		C07B018F194E110600EACCC5 /* Error.wav in Resources */ = {isa = PBXBuildFile; fileRef = C07B0189194E110600EACCC5 /* Error.wav */; };
+		C07B0190194E110600EACCC5 /* Ka-Ching.wav in Resources */ = {isa = PBXBuildFile; fileRef = C07B018A194E110600EACCC5 /* Ka-Ching.wav */; };
+		C07B0191194E110600EACCC5 /* Mining by Moonlight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C07B018B194E110600EACCC5 /* Mining by Moonlight.mp3 */; };
+		C07B0192194E110600EACCC5 /* Scrape.wav in Resources */ = {isa = PBXBuildFile; fileRef = C07B018C194E110600EACCC5 /* Scrape.wav */; };
+		C07B0194194E13D400EACCC5 /* Chains.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07B0193194E13D400EACCC5 /* Chains.swift */; };
+		C08B2A55194CD5C9007194CF /* Grid.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C08B2A54194CD5C9007194CF /* Grid.atlas */; };
+		C08B2A57194CD5E0007194CF /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C08B2A56194CD5E0007194CF /* Sprites.atlas */; };
+		C08B2A59194CD76D007194CF /* Tiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08B2A58194CD76D007194CF /* Tiles.swift */; };
+		C08B2A5B194CD8B4007194CF /* Levels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08B2A5A194CD8B4007194CF /* Levels.swift */; };
+		C08B2A5D194CF2EE007194CF /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08B2A5C194CF2EE007194CF /* Utilities.swift */; };
+		C08B2A64194CF843007194CF /* Level_0.json in Resources */ = {isa = PBXBuildFile; fileRef = C08B2A5F194CF843007194CF /* Level_0.json */; };
+		C08B2A65194CF843007194CF /* Level_1.json in Resources */ = {isa = PBXBuildFile; fileRef = C08B2A60194CF843007194CF /* Level_1.json */; };
+		C08B2A66194CF843007194CF /* Level_2.json in Resources */ = {isa = PBXBuildFile; fileRef = C08B2A61194CF843007194CF /* Level_2.json */; };
+		C08B2A67194CF843007194CF /* Level_3.json in Resources */ = {isa = PBXBuildFile; fileRef = C08B2A62194CF843007194CF /* Level_3.json */; };
+		C08B2A68194CF843007194CF /* Level_4.json in Resources */ = {isa = PBXBuildFile; fileRef = C08B2A63194CF843007194CF /* Level_4.json */; };
+		C08B2A6A194D2EB8007194CF /* Swap.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08B2A69194D2EB8007194CF /* Swap.swift */; };
 		C0B1A7EA194CC667007F4D1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B1A7E9194CC667007F4D1B /* AppDelegate.swift */; };
 		C0B1A7EC194CC667007F4D1B /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C0B1A7EB194CC667007F4D1B /* GameScene.sks */; };
 		C0B1A7EE194CC667007F4D1B /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B1A7ED194CC667007F4D1B /* GameScene.swift */; };
@@ -27,6 +45,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C07B0187194E110600EACCC5 /* Chomp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Chomp.wav; sourceTree = "<group>"; };
+		C07B0188194E110600EACCC5 /* Drip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Drip.wav; sourceTree = "<group>"; };
+		C07B0189194E110600EACCC5 /* Error.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Error.wav; sourceTree = "<group>"; };
+		C07B018A194E110600EACCC5 /* Ka-Ching.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Ka-Ching.wav"; sourceTree = "<group>"; };
+		C07B018B194E110600EACCC5 /* Mining by Moonlight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mining by Moonlight.mp3"; sourceTree = "<group>"; };
+		C07B018C194E110600EACCC5 /* Scrape.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Scrape.wav; sourceTree = "<group>"; };
+		C07B0193194E13D400EACCC5 /* Chains.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chains.swift; sourceTree = "<group>"; };
+		C08B2A54194CD5C9007194CF /* Grid.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Grid.atlas; sourceTree = "<group>"; };
+		C08B2A56194CD5E0007194CF /* Sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Sprites.atlas; sourceTree = "<group>"; };
+		C08B2A58194CD76D007194CF /* Tiles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tiles.swift; sourceTree = "<group>"; };
+		C08B2A5A194CD8B4007194CF /* Levels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Levels.swift; sourceTree = "<group>"; };
+		C08B2A5C194CF2EE007194CF /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		C08B2A5F194CF843007194CF /* Level_0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_0.json; sourceTree = "<group>"; };
+		C08B2A60194CF843007194CF /* Level_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_1.json; sourceTree = "<group>"; };
+		C08B2A61194CF843007194CF /* Level_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_2.json; sourceTree = "<group>"; };
+		C08B2A62194CF843007194CF /* Level_3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_3.json; sourceTree = "<group>"; };
+		C08B2A63194CF843007194CF /* Level_4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_4.json; sourceTree = "<group>"; };
+		C08B2A69194D2EB8007194CF /* Swap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swap.swift; sourceTree = "<group>"; };
 		C0B1A7E4194CC667007F4D1B /* Match Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Match Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B1A7E8194CC667007F4D1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0B1A7E9194CC667007F4D1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +94,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C07B0186194E110600EACCC5 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				C07B0187194E110600EACCC5 /* Chomp.wav */,
+				C07B0188194E110600EACCC5 /* Drip.wav */,
+				C07B0189194E110600EACCC5 /* Error.wav */,
+				C07B018A194E110600EACCC5 /* Ka-Ching.wav */,
+				C07B018B194E110600EACCC5 /* Mining by Moonlight.mp3 */,
+				C07B018C194E110600EACCC5 /* Scrape.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		C08B2A5E194CF843007194CF /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				C08B2A5F194CF843007194CF /* Level_0.json */,
+				C08B2A60194CF843007194CF /* Level_1.json */,
+				C08B2A61194CF843007194CF /* Level_2.json */,
+				C08B2A62194CF843007194CF /* Level_3.json */,
+				C08B2A63194CF843007194CF /* Level_4.json */,
+			);
+			path = Levels;
+			sourceTree = "<group>";
+		};
 		C0B1A7DB194CC667007F4D1B = {
 			isa = PBXGroup;
 			children = (
@@ -82,9 +143,18 @@
 				C0B1A7E9194CC667007F4D1B /* AppDelegate.swift */,
 				C0B1A7EB194CC667007F4D1B /* GameScene.sks */,
 				C0B1A7ED194CC667007F4D1B /* GameScene.swift */,
+				C08B2A5C194CF2EE007194CF /* Utilities.swift */,
+				C08B2A58194CD76D007194CF /* Tiles.swift */,
+				C08B2A5A194CD8B4007194CF /* Levels.swift */,
+				C07B0193194E13D400EACCC5 /* Chains.swift */,
 				C0B1A7EF194CC667007F4D1B /* GameViewController.swift */,
+				C08B2A69194D2EB8007194CF /* Swap.swift */,
 				C0B1A7F1194CC667007F4D1B /* Main.storyboard */,
+				C07B0186194E110600EACCC5 /* Sounds */,
+				C08B2A5E194CF843007194CF /* Levels */,
 				C0B1A7F4194CC667007F4D1B /* Images.xcassets */,
+				C08B2A56194CD5E0007194CF /* Sprites.atlas */,
+				C08B2A54194CD5C9007194CF /* Grid.atlas */,
 				C0B1A7E7194CC667007F4D1B /* Supporting Files */,
 			);
 			path = "Match Game";
@@ -195,9 +265,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C08B2A65194CF843007194CF /* Level_1.json in Resources */,
+				C08B2A68194CF843007194CF /* Level_4.json in Resources */,
+				C07B0190194E110600EACCC5 /* Ka-Ching.wav in Resources */,
+				C07B018F194E110600EACCC5 /* Error.wav in Resources */,
+				C07B0192194E110600EACCC5 /* Scrape.wav in Resources */,
+				C08B2A67194CF843007194CF /* Level_3.json in Resources */,
 				C0B1A7F5194CC667007F4D1B /* Images.xcassets in Resources */,
+				C08B2A64194CF843007194CF /* Level_0.json in Resources */,
 				C0B1A7EC194CC667007F4D1B /* GameScene.sks in Resources */,
+				C07B018D194E110600EACCC5 /* Chomp.wav in Resources */,
+				C07B018E194E110600EACCC5 /* Drip.wav in Resources */,
 				C0B1A7F3194CC667007F4D1B /* Main.storyboard in Resources */,
+				C08B2A66194CF843007194CF /* Level_2.json in Resources */,
+				C08B2A55194CD5C9007194CF /* Grid.atlas in Resources */,
+				C07B0191194E110600EACCC5 /* Mining by Moonlight.mp3 in Resources */,
+				C08B2A57194CD5E0007194CF /* Sprites.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,9 +298,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C08B2A5D194CF2EE007194CF /* Utilities.swift in Sources */,
+				C08B2A6A194D2EB8007194CF /* Swap.swift in Sources */,
+				C08B2A5B194CD8B4007194CF /* Levels.swift in Sources */,
 				C0B1A7EE194CC667007F4D1B /* GameScene.swift in Sources */,
 				C0B1A7F0194CC667007F4D1B /* GameViewController.swift in Sources */,
+				C07B0194194E13D400EACCC5 /* Chains.swift in Sources */,
 				C0B1A7EA194CC667007F4D1B /* AppDelegate.swift in Sources */,
+				C08B2A59194CD76D007194CF /* Tiles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +495,7 @@
 				C0B1A806194CC667007F4D1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C0B1A807194CC667007F4D1B /* Build configuration list for PBXNativeTarget "Match GameTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +504,7 @@
 				C0B1A809194CC667007F4D1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
