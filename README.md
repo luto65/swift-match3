@@ -32,7 +32,7 @@ Unfortunately i haven't included the comments in the tutorials and in some cases
 
 For licensing, please refer to [http://www.raywenderlich.com/faq](http://www.raywenderlich.com/faq)
 
-MIT License applies for the code in this repository
+[MIT License](http://opensource.org/licenses/MIT) applies for the code in this repository
 
 Credits: Tutorial and Objective-C code [Matthijs Hollemans](http://www.raywenderlich.com/u/Hollance). Artwork by [Vicki Wenderlich](http://www.gameartguppy.com/about/license/). The music is by [Kevin MacLeod](http://incompetech.com/). The sound effects are based on samples from [freesound.org](http://freesound.org).
 
