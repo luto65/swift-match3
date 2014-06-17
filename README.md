@@ -28,6 +28,14 @@ Part2: [http://www.raywenderlich.com/66915/how-to-make-a-game-like-candy-crush-p
 
 Unfortunately i haven't included the comments in the tutorials and in some cases they no longer applied
 
+**What is the License for the Tutorial Source Code?**  
+
+For licensing, please refer to [http://www.raywenderlich.com/faq](http://www.raywenderlich.com/faq)
+
+MIT License applies for the code in this repository
+
 Credits: Tutorial and Objective-C code [Matthijs Hollemans](http://www.raywenderlich.com/u/Hollance). Artwork by [Vicki Wenderlich](http://www.gameartguppy.com/about/license/). The music is by [Kevin MacLeod](http://incompetech.com/). The sound effects are based on samples from [freesound.org](http://freesound.org).
 
-Can contact me at [@gabrielnicauk](https://twitter.com/gabrielnicauk)
+**Contact**
+
+Can contact me at [@gabrielnicauk](https://twitter.com/gabrielnicauk) or [LinkedIn](https://www.linkedin.com/profile/view?id=6523115&authType=name&authToken=OlZi&locale=en_US&pvs=pp&trk=ppro_viewmore)
