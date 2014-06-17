@@ -28,6 +28,6 @@ Part2: [http://www.raywenderlich.com/66915/how-to-make-a-game-like-candy-crush-p
 
 Unfortunately i haven't included the comments in the tutorials and in some cases they no longer applied
 
-All credit for the main logic behind the code goes to Matthijs Hollemans
+Credits: Tutorial and Objective-C code [Matthijs Hollemans](http://www.raywenderlich.com/u/Hollance). Artwork by [Vicki Wenderlich](http://www.gameartguppy.com/about/license/). The music is by [Kevin MacLeod](http://incompetech.com/). The sound effects are based on samples from [freesound.org](http://freesound.org).
 
 Can contact me at [@gabrielnicauk](https://twitter.com/gabrielnicauk)
