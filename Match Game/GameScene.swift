@@ -71,9 +71,7 @@ class GameScene: SKScene {
 		gameLayer.addChild(cropLayer)
 		cropLayer.maskNode = maskLayer
 		
-		gameLayer.addChild(boardLayer) //cropLayer.addChild(boardLayer)
-		
-		
+		cropLayer.addChild(boardLayer)
 		
 	}
 	

@@ -55,43 +55,43 @@ class GameViewController: UIViewController {
 					skView.multipleTouchEnabled = false
             
             /* Sprite Kit applies additional optimizations to improve rendering performance */
-            skView.ignoresSiblingOrder = true
+            //skView.ignoresSiblingOrder = true
             
             /* Set the scale mode to scale to fit the window */
             scene.scaleMode = .AspectFill
 			
-						level = Level(filename: "Level_3")
-						scene.level = level
-						scene.addGridTiles()
-						scene.swipeHandler = {
-							(swap: TileSwap) in
-							
-							self.view.userInteractionEnabled = false
-							
-							if self.level!.isPossibleSwap(swap)
-							{
-								self.level!.performSwap(swap)
-								self.scene!.animateSwap(swap) {
-									self.handleMatches()
-								}
-							} else {
-								self.scene!.animateInvalidSwap(swap) {
-									self.view.userInteractionEnabled = true
-								}					
-							}
-							
-						}
-						
-						gameOverPanel.hidden = true
-									skView.presentScene(scene)
-						self.scene = scene
-						
-						let url = NSBundle.mainBundle().URLForResource("Mining by Moonlight", withExtension: "mp3")
-						backgroundMusic = AVAudioPlayer(contentsOfURL: url, error: nil)
-						backgroundMusic!.numberOfLoops = -1
-						backgroundMusic!.play()
-						
-						beginGame()
+			level = Level(filename: "Level_3")
+			scene.level = level
+			scene.addGridTiles()
+			scene.swipeHandler = {
+				(swap: TileSwap) in
+				
+				self.view.userInteractionEnabled = false
+				
+				if self.level!.isPossibleSwap(swap)
+				{
+					self.level!.performSwap(swap)
+					self.scene!.animateSwap(swap) {
+						self.handleMatches()
+					}
+				} else {
+					self.scene!.animateInvalidSwap(swap) {
+						self.view.userInteractionEnabled = true
+					}					
+				}
+				
+			}
+			
+			gameOverPanel.hidden = true
+						skView.presentScene(scene)
+			self.scene = scene
+			
+			let url = NSBundle.mainBundle().URLForResource("Mining by Moonlight", withExtension: "mp3")
+			backgroundMusic = AVAudioPlayer(contentsOfURL: url, error: nil)
+			backgroundMusic!.numberOfLoops = -1
+			backgroundMusic!.play()
+			
+			beginGame()
         }
     }
 	
