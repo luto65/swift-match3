@@ -1,7 +1,7 @@
 swift-match3
 ============
 
-Swift version of the "How to Make a Game Like Candy Crush" tutorial by Matthijs Hollemans originally posted on the Ray Wanderlich's site
+Swift version of the "How to Make a Game Like Candy Crush" tutorial by [Matthijs Hollemans](http://matthijshollemans.com/) originally posted on [Ray Wanderlich](www.raywenderlich.com)'s site
 
 ****
 
