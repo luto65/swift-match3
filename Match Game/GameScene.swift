@@ -64,8 +64,10 @@ class GameScene: SKScene {
 		addChild(gameLayer)
 		
 		gridLayer.position = location
+		gridLayer.zPosition = 0
 		maskLayer.position = location
 		boardLayer.position = location
+		cropLayer.zPosition = 1
 		
 		gameLayer.addChild(gridLayer)
 		gameLayer.addChild(cropLayer)
