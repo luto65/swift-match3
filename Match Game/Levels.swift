@@ -19,7 +19,7 @@ class Level
 	
 	var targetScore = UInt(0)
 	var maximumMoves = UInt(0)
-	var comboMultiplier = UInt(1)
+  var comboMultiplier: UInt = UInt(1)
 	
 	var possibleSwaps: Array<TileSwap> = Array<TileSwap>()
 	
@@ -38,10 +38,10 @@ class Level
 					{
 						return dictionary as? Dictionary<String, AnyObject>
 					} else {
-						println("Level file \(filename) is not valid JSON, error: \(error.description)")
+						println("Level file \(filename) is not valid JSON, error: \(error!.description)")
 					}
 				} else {
-					println("Could not load level file \(filename), error: \(error.description)")
+					println("Could not load level file \(filename), error: \(error!.description)")
 				}
 				
 			} else {
@@ -53,9 +53,9 @@ class Level
 		
 		let dictionary = loadJSON(filename)
 		let levelGrid : AnyObject? = dictionary!["tiles"]
-		for (row, array : AnyObject) in enumerate(levelGrid! as AnyObject[])
+		for (row, array : AnyObject) in enumerate(levelGrid! as [AnyObject])
 		{
-			let uwArray = array as Int[]
+			let uwArray = array as [Int]
 			for (column, value) in enumerate(uwArray)
 			{
 				let tileRow = MaxRows - row - 1
@@ -76,9 +76,9 @@ class Level
 			
 			var set = Array<Tile>()
 			
-			for row in 0..MaxRows
+			for row in 0..<MaxRows
 			{
-				for column in 0..MaxColumns
+				for column in 0..<MaxColumns
 				{
 					if let grid = grid[column, row]
 					{
@@ -102,7 +102,7 @@ class Level
 			return set
 		}
 		
-		var set: Tile[]
+		var set: [Tile]
 		
 		do {
 			set = createInitialTiles()
@@ -132,11 +132,11 @@ class Level
 	}
 	
 	func detectPossibleSwaps() {
-		var set = TileSwap[]()
+		var set = [TileSwap]()
 		
-		for row in 0..MaxRows
+		for row in 0..<MaxRows
 		{
-			for column in 0..MaxColumns
+			for column in 0..<MaxColumns
 			{
 				if let tile = tiles[column, row]
 				{
@@ -213,10 +213,10 @@ class Level
 	
 	// Matches
 	
-	func detectHorizontalMatches() -> TileChain[] {
-		var set: TileChain[] = TileChain[]()
+	func detectHorizontalMatches() -> [TileChain] {
+		var set: [TileChain] = [TileChain]()
 		
-		for row in 0..MaxRows
+		for row in 0..<MaxRows
 		{
 			for var column = 0; column < MaxColumns-2 ;
 			{
@@ -247,10 +247,10 @@ class Level
 		return set
 	}
 	
-	func detectVerticalMatches() -> TileChain[] {
-		var set: TileChain[] = TileChain[]()
+	func detectVerticalMatches() -> [TileChain] {
+		var set: [TileChain] = [TileChain]()
 		
-		for column in 0..MaxColumns
+		for column in 0..<MaxColumns
 		{
 			for var row = 0; row < MaxRows - 2 ;
 			{
@@ -281,7 +281,7 @@ class Level
 		return set
 	}
 	
-	func removeMatches() -> TileChain[] {
+	func removeMatches() -> [TileChain] {
 		let horizontalChains = detectHorizontalMatches()
 		let verticalChains = detectVerticalMatches()
 		
@@ -294,7 +294,7 @@ class Level
 		return horizontalChains + verticalChains
 	}
 	
-	func removeTilesFromChains(chains: TileChain[])
+	func removeTilesFromChains(chains: [TileChain])
 	{
 		for chain in chains
 		{
@@ -306,17 +306,17 @@ class Level
 	}
 
 	
-	func fillHoles() -> Array<Tile[]> {
-		var columns = Array<Tile[]>()
+	func fillHoles() -> Array<[Tile]> {
+		var columns = Array<[Tile]>()
 		
-		for column in 0..MaxColumns
+		for column in 0..<MaxColumns
 		{
-			var array = Tile[]()
-			for row in 0..MaxRows
+			var array = [Tile]()
+			for row in 0..<MaxRows
 			{
 				if grid[column, row] != nil  && tiles[column, row] == nil
 				{
-					for lookup in row+1..MaxRows
+					for lookup in row+1..<MaxRows
 					{
 						if let tile = tiles[column, lookup]
 						{
@@ -341,13 +341,13 @@ class Level
 		
 	}
 	
-	func topUpTiles() -> Array<Tile[]> {
-		var columns = Array<Tile[]>()
+	func topUpTiles() -> Array<[Tile]> {
+		var columns = Array<[Tile]>()
 		var tileType = 0
 		
-		for column in 0..MaxColumns
+		for column in 0..<MaxColumns
 		{
-			var array = Tile[]()
+			var array = [Tile]()
 			for var row = MaxRows - 1; row >= 0 && tiles[column, row] == nil; row--
 			{
 				if grid[column, row] != nil
@@ -371,11 +371,11 @@ class Level
 		return columns
 	}
 	
-	func calculateScores(chains: TileChain[])
+	func calculateScores(chains: [TileChain])
 	{
-		for var i=0; i < chains.count; i++
+    for var i:Int=0; i < chains.count; i++
 		{
-			chains[i].score = UInt(BaseChainScore * (chains[i].tiles.count - 2)) * comboMultiplier
+      chains[i].score = BaseChainScore * Int(chains[i].tiles.count - 2) * Int(comboMultiplier);
 			comboMultiplier++
 		}
 	}

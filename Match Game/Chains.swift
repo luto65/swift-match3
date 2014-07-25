@@ -8,24 +8,24 @@
 
 import Foundation
 
-let BaseChainScore = 60
+let BaseChainScore: Int = 60
 
-struct TileChain
+class TileChain
 {
 	enum ChainType {
 		case Horizontal, Vertical
 	}
 	
-	var tiles: Array<Tile> = Tile[]() // at the moment there are no private vars in swift. tiles is not readonly like intended 
+	var tiles: Array<Tile> = [Tile]() 
 	var type: ChainType = .Horizontal
-	var score: UInt = 0
+	var score: Int = 0
 	
-	mutating func add(tile: Tile)
+  func add(tile: Tile)
 	{
 		tiles.append(tile)
 	}
 	
-	mutating func changeType(newType: ChainType)
+	func changeType(newType: ChainType)
 	{
 		type = newType
 	}

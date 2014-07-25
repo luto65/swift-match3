@@ -33,11 +33,11 @@ class GameViewController: UIViewController {
 	var movesLeft: UInt = 0
 	var score: UInt = 0
 	
-	@IBOutlet var targetLabel : UILabel
-	@IBOutlet var movesLabel : UILabel
-	@IBOutlet var scoreLabel : UILabel
-	@IBOutlet var gameOverPanel : UIImageView
-	@IBOutlet var shuffleButton : UIButton
+	@IBOutlet var targetLabel : UILabel!
+	@IBOutlet var movesLabel : UILabel!
+	@IBOutlet var scoreLabel : UILabel!
+	@IBOutlet var gameOverPanel : UIImageView!
+	@IBOutlet var shuffleButton : UIButton!
 	
 	var backgroundMusic: AVAudioPlayer?
 	
@@ -80,6 +80,7 @@ class GameViewController: UIViewController {
 						self.view.userInteractionEnabled = true
 					}					
 				}
+  
 				
 			}
 			

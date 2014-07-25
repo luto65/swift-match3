@@ -13,7 +13,7 @@ let NumTileTypes: Int = 6
 let TileWidth = 32.0
 let TileHeight = 36.0
 
-let spriteNames:String[] = [
+let spriteNames:[String] = [
 	"Croissant",
 	"Cupcake",
 	"Danish",
@@ -22,7 +22,7 @@ let spriteNames:String[] = [
 	"SugarCookie",
 ]
 
-let highlightedSpriteNames: String[] = [
+let highlightedSpriteNames: [String] = [
 	"Croissant-Highlighted",
 	"Cupcake-Highlighted",
 	"Danish-Highlighted",
@@ -70,7 +70,7 @@ class Tile: Equatable
 	return (left.column == right.column) && (left.row == right.row) && (left.type == right.type)
 }
 
-class GridElement 
+class GridElement : Equatable
 {
 	// Note: To support different types of grid tiles, you can add different types here
 	
@@ -90,4 +90,8 @@ class GridElement
 	{
 		self.value = value
 	}
+}
+
+@infix func ==(left: GridElement, right: GridElement) -> Bool {
+  return left === right
 }

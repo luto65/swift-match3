@@ -30,7 +30,7 @@ class GameScene: SKScene {
 	let addTileSound  = SKAction.playSoundFileNamed("Drip.wav", waitForCompletion: false)
 	
 	var swipeFromColumn = NSNotFound, swipeFromRow = NSNotFound
-	var swipeHandler: (swap: TileSwap)->()
+  var swipeHandler: ((swap: TileSwap)->())?
 	
 	init(coder aDecoder: NSCoder!)  {
 		gameLayer = SKNode()
@@ -98,9 +98,9 @@ class GameScene: SKScene {
 	}
 	
 	func addGridTiles() {
-		for row in 0..MaxRows
+		for row in 0..<MaxRows
 		{
-			for column in 0..MaxColumns
+			for column in 0..<MaxColumns
 			{
 				if let gridTile = level!.grid[column, row] {
 					let spriteNode = SKSpriteNode(imageNamed: "MaskTile")
@@ -112,15 +112,15 @@ class GameScene: SKScene {
 		
 		
 		
-		for row in 0...MaxRows
+    for row in 0...MaxRows
 		{
-			for column in 0...MaxColumns
+      for column in 0...MaxColumns
 			{
 			
-				let topLeft:	UInt8 = (column > 0			 && row < MaxRows && level!.grid[column - 1, row]     != nil) ? 1 : 0
-				let bottomLeft: UInt8 = (column > 0			 && row > 0		  && level!.grid[column - 1, row - 1] != nil) ? 1 : 0
-				let topRight:	UInt8 = (column < MaxColumns && row < MaxRows && level!.grid[column    , row]	  != nil) ? 1 : 0
-				let bottomRight:UInt8 = (column < MaxColumns && row > 0		  && level!.grid[column    , row - 1] != nil) ? 1 : 0
+        let topLeft:	UInt8 =   (column > 0           && row < MaxRows  && level!.grid[column - 1, row]     != nil) ? 1 : 0
+				let bottomLeft: UInt8 = (column > 0           && row > 0        && level!.grid[column - 1, row - 1] != nil) ? 1 : 0
+				let topRight:	UInt8 =   (column < MaxColumns  && row < MaxRows  && level!.grid[column    , row]     != nil) ? 1 : 0
+				let bottomRight:UInt8 = (column < MaxColumns  && row > 0        && level!.grid[column    , row - 1] != nil) ? 1 : 0
 				
 				let value = topLeft | topRight << 1 | bottomLeft << 2 | bottomRight << 3
 				
@@ -188,10 +188,11 @@ class GameScene: SKScene {
 		
 		let fromTile  = level!.tiles[swipeFromColumn, swipeFromRow]
 		
-		if swipeHandler != nil
+    
+		if swipeHandler
 		{
 			var swap = TileSwap(fromTile!, toTile!)
-			swipeHandler(swap: swap)
+			swipeHandler!(swap: swap)
 		}
 		
 	}
@@ -233,7 +234,7 @@ class GameScene: SKScene {
 		runAction(invalidSwapSound)
 	}
 	
-	func animateMatchedTiles(chains: TileChain[], completion: dispatch_block_t)
+	func animateMatchedTiles(chains: [TileChain], completion: dispatch_block_t)
 	{
 		for chain in chains
 		{
@@ -257,7 +258,7 @@ class GameScene: SKScene {
 		runAction(SKAction.sequence([SKAction.waitForDuration(0.3), SKAction.runBlock(completion)]))
 	}
 	
-	func animateFallingTiles(columns: Array<Tile[]>, completion: dispatch_block_t)
+	func animateFallingTiles(columns: Array<[Tile]>, completion: dispatch_block_t)
 	{
 		var longestDuration: Double = 0
 		
@@ -280,7 +281,7 @@ class GameScene: SKScene {
 		runAction(SKAction.sequence([SKAction.waitForDuration(longestDuration), SKAction.runBlock(completion)]))
 	}
 	
-	func animateNewTiles(columns: Array<Tile[]>, completion: dispatch_block_t)
+	func animateNewTiles(columns: Array<[Tile]>, completion: dispatch_block_t)
 	{
 		var longestDuration: Double = 0
 		
@@ -437,4 +438,10 @@ class GameScene: SKScene {
     }
 }
 
+typealias SwipeHandlerFunc = (swap: TileSwap)->()
+
+@infix func == (A: SwipeHandlerFunc, B: SwipeHandlerFunc)
+{
+  return A == B
+}
 

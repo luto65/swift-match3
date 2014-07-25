@@ -25,9 +25,9 @@ extension Int
 	}
 }
 
-struct Matrix<T> {
+struct Matrix<T: Equatable> {
 	let rows: Int, columns: Int
-	var grid: T?[]
+	var grid: [T?]
 	init(rows: Int, columns: Int) {
 		self.rows = rows
 		self.columns = columns
