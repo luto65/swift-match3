@@ -1,3 +1,8 @@
+This code does not work properly since meanwhile the handling of bitwise operations has changed radically.
+a minor workaround is needed, and I will include it in the code
+
+
+
 swift-match3
 ============
 
